@@ -1,0 +1,34 @@
+@font-face {
+  font-family: CeraProRegular;
+  src: url("../fonts/TypeMates - Cera PRO Regular.otf");
+}
+
+@font-face {
+  font-family: CeraProBold;
+  src: url("../fonts/TypeMates - Cera PRO Bold.otf");
+}
+
+@font-face {
+  font-family: CeraProBoldItalic;
+  src: url("../fonts/TypeMates - Cera PRO Bold Italic.otf");
+}
+
+@font-face {
+  font-family: CeraProThin;
+  src: url("../fonts/TypeMates - Cera PRO Thin.otf");
+}
+
+@font-face {
+  font-family: CeraProMedium;
+  src: url("../fonts/TypeMates - Cera PRO Medium.otf");
+}
+
+@font-face {
+  font-family: CeraProLight;
+  src: url("../fonts/TypeMates - Cera PRO Light.otf");
+}
+
+@font-face {
+  font-family: CeraProBlack;
+  src: url("../fonts/TypeMates - Cera PRO Black.otf");
+}

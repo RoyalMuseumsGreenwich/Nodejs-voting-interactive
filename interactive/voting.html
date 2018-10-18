@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IAPY2018 - Voting Interactive</title>
+	<link rel="stylesheet" type="text/css" href="lib/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/voting.css">
+	<link rel="stylesheet" type="text/css" href="css/attractor.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts_CeraPRO.css">
+	<link rel="stylesheet" type="text/css" href="css/keyboard.css">
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="lib/imagesloaded.pkgd.js"></script>
+	<script type="text/javascript" src="lib/jquery.caret.js"></script>
+	<script type="text/javascript" src="js/keyboard.js"></script>
+	<script type="text/javascript" src="js/voting.js"></script>
+</head>
+<body>
+
+	<div id="container">
+
+		<!-- ATTRACT SCREEN -->
+		<div id="attractScreen" class="screen">
+			<div class="attractorTextbox">
+				<div class="barViewport aboveBarViewport">
+					<div class="barContent aboveBar attractorAnim">
+						<span class="attractorHeadline">Placeholder</span>
+					</div>
+				</div>
+				<div class="dividerBar attractorAnim"></div>
+				<div class="barViewport belowBarViewport">
+					<div class="barContent belowBar attractorAnim">
+						<span class="attractorBodyText">Placeholder</span>
+					</div>
+				</div>
+			</div>
+			<div class="touchToStartBtn"><span class="dot"></span>Touch the screen to start</div>
+			<div class="textBackdropDiv"></div>
+<!-- 			<div class="categoryIconDiv attractorAnim">
+				<img src="img/category.svg" class="attractorAnim">
+			</div> -->
+			<video autoplay loop class="attractorVid" muted>
+				<source src="" type="video/mp4">
+			</video>
+		</div>
+
+		<!-- STILL THERE SCREEN -->
+		<div id="stillThereScreen" class="screen" hidden>
+			<h1>Are you still there?</h1>
+			<h3>Touch the screen or I will restart in <span id="stillThereSpan">X</span> second<span 	id="stillThereSpanS">s</span></h3>
+			<button id="stillThereBtn" class="animated pulse infinite">Continue</button>
+		</div>
+		
+
+
+		<div id="contentScreen" class="screen">
+
+			<h1>Cast your vote for the People's Choice award</h1>
+			<div id="thumbs"></div>
+			<div id="popupDiv">
+
+				<div id="confirmChoiceDiv" class="popupPageDiv displayed">
+					<button class="cancelChoiceBtn"></button>
+					<div id="popupImgBigDiv" class="popupImgDiv">
+						<img src="">
+					</div>
+					<div id="confirmTextDiv" class="confirmDiv">
+						<h2>dsfsdf</h2>
+						<h3>dfgfg</h3>
+						<button id="voteAndSubBtn" class="voteBtn">Vote and subscribe to the Space Newsletter</button>
+						<button id="voteNoSubBtn" class="voteBtn">Vote without subscribing</button>
+					</div>
+				</div>
+
+				<div id="confirmEmailDiv" class="popupPageDiv">
+					<button class="cancelChoiceBtn"></button>
+					<div id="popupImgSmallDiv" class="popupImgDiv">
+						<img src="">
+					</div>
+					<div id="confirmEmailTextDiv" class="confirmDiv">
+						<form id="emailForm">
+							<h1>Confirm your vote</h1>
+<!-- 							<h2>Subscribe to the Space Newsletter</h2> -->
+<!-- 							<h4>Subscribe to the Space Newsletter</h4> -->
+							<span class="subtext">Enter your email address to subscribe to our Space Newsletter. By clicking confirm you agree to our terms. We will store your data securely and never sell it to third parties. You can unsubscribe at any time. To find out more read our <span class="privacyLink">Privacy Notice</span>.</span>
+							<div>
+								<input type="text" name="emailInput" class="keyInput" id="emailInput" spellcheck="false" placeholder="email-address@example.co.uk">
+								<button id="confirmEmailBtn" class="confirmBtn">Confirm and subscribe</button>
+							</div>
+							<span></span>
+						</form>
+						<div id="emailErrorBubble">Error message!</div>
+						<div class="keyboard"></div>
+					</div>
+<!-- 					<div class="divider"></div>
+					<button id="confirmNoEmailBtn" class="confirmBtn">Confirm without subscribing</button> -->
+				</div>
+
+				<div id="voteConfirmationDiv" class="popupPageDiv">
+					<button class="cancelChoiceBtn"></button>
+					<img src="img/ui/Tick.png">
+					<div class="confirmDiv">
+						<h4>Your vote has been received.</h4>
+						<h1>Thank you!</h1>
+					</div>
+				</div>
+
+				<div id="privacyNotice" class="popupPageDiv">
+					<div id="privacyContent">
+						<div class="closePrivacyNoticeBtn crossBtn"></div>
+						<h2>Privacy Notice</h2>
+						<p>This Privacy Notice explains how we - Royal Museums Greenwich - use any personal information you give us and that we collect about you when you use our services and website.</p>
+						<p>For the purposes of the Data Protection Act, the Data Controller is the Board of Trustees of the National Maritime Museum.</p>
+						<ul>
+							<li><h6>What personal information do we collect about you?</h6></li>
+						</ul>
+						<p>This interactive collects your email address and no other personal data.</p>
+						<ul>
+							<li><h6>How will we use the information about you?</h6></li>
+						</ul>
+						<p>We collect information about you to keep you up to date with our latest news, events and offers which we think may be of interest to you.</p>
+						<p>We will collect and process data where it is necessary to do so for our legitimate interests. We collect data for purposes of administration (to keep an up-to-date record of our relationships and administer donations), to further our charitable aims and to facilitate a supporter journey of the best possible standard.</p>
+						<p>If you have signed up to hear more from us, we may use your information to improve the relevancy of our marketing communications. We will never sell your information or share it with third parties for their marketing purposes.</p>
+						<ul>
+							<li><h6>How will we protect your data?</h6></li>
+						</ul>
+						<p>We follow appropriate security procedures in the storage and disclosure of personal data so as to guard against loss, damage and unauthorised access by third parties and have robust technological solutions to ensure your personal data is protected from unauthorised access. We also require those external parties to whom we transfer personal data to comply with the same.</p>
+						<ul>
+							<li><h6>Newsletter</h6></li>
+						</ul>
+						<p>We would like to send you information about our latest news, offers and events via our email newsletter, but we will only do this with your consent.</p>
+						<p>If you have signed up to our newsletter you can opt out at any time by clicking the ‘Unsubscribe’ link at the bottom of any newsletter. You can also ask to be deleted from our list at any time by contacting rmgenquiries@rmg.co.uk.</p>
+						<p>We use Mailchimp to send our email newsletter and Mailchimp securely store your personal data on our behalf. The entire Mailchimp application is encrypted to secure your personal data.</p>
+						<ul>
+							<li><h6>Access to your information and its accuracy</h6></li>
+						</ul>
+						<p>You have the right to request a copy of the information that we hold about you. We want to make sure that your personal information is accurate and up to date so you may ask us to correct or remove information you think is inaccurate or unnecessary.</p>
+						<p>You also have the right to request that your data is deleted.</p>
+						<p>If you would like a copy of your personal information, or have any questions about this Privacy Notice, please email or write to us at the following address:</p>
+						<ul class="addressList">
+							<li>Christopher Gray, Museum Secretary</li>
+							<li>National Maritime Museum</li>
+							<li>Park Row</li>
+							<li>London, SE10 9NF</li>
+						</ul>
+						<p>You can also email us on: <span class="linkSpan">rmgenquiries@rmg.co.uk</span></p>
+						<p>For independent advice about data protection, privacy and data sharing issues, you can contact the Information Commissioner at:</p>
+						<ul class="addressList">
+							<li>Wycliffe House, Water Lane</li>
+							<li>Wilmslow, Cheshire, SK9 5AF</li>
+						</ul>
+						<p>For more information, you can visit their website <span class="linkSpan">ico.org.uk</span>.</p>
+						<button class="confirmBtn closePrivacyNoticeBtn">Close and return</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</body>
+
+</html>
