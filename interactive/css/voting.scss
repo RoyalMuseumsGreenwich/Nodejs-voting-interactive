@@ -1,8 +1,9 @@
-// * {
-// 	touch-action: none;
-// 	user-select: none;
-// 	cursor: none;
-// }
+* {
+	touch-action: pan-y;
+	user-select: none;
+	cursor: none;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -211,7 +212,13 @@ body {
 			position: relative;
 			text-align: center;
 			h4 {
-				margin-bottom: 20px;
+				margin-bottom: 60px;
+			}
+			h2 {
+				font-size: 28px;
+				font-weight: normal;
+				margin-top: 60px;
+				width: 720px;
 			}
 		}
 	}
@@ -235,7 +242,7 @@ body {
 		}
 		h2 {
 			font-size: 40px;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 			margin: 0 0 20px 0;
 		}
 		h3 {
@@ -381,6 +388,11 @@ button:active {
 	transform: scale(0.9);
 }
 
+.linkSpan {
+	font-weight: bold;
+	text-decoration: underline !important;
+}
+
 #privacyNotice {
 	color: white;
 	z-index: 2;
@@ -415,10 +427,6 @@ button:active {
 	}
 	.addressList {
 		list-style-type: none;
-	}
-	.linkSpan {
-		font-weight: bold;
-		text-decoration: underline;
 	}
 	h2 {
 		font-size: 64px;

@@ -1,0 +1,51 @@
+.keyboard {
+  font-family: CeraProRegular;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  box-sizing: border-box; }
+  .keyboard .row {
+    display: flex;
+    justify-content: center; }
+
+.keyboard .row:not(:last-child) {
+  margin-bottom: 10px; }
+
+.keyboard .row .key:not(:last-child) {
+  margin-right: 10px; }
+
+.keyboard .key {
+  display: inline-block;
+  position: relative;
+  height: 65px;
+  width: 80px;
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  padding: 16px;
+  background: #393736; }
+  .keyboard .key:active {
+    background: #e4e4e4; }
+  .keyboard .key.uppercase {
+    text-transform: uppercase; }
+  .keyboard .key.wide {
+    min-width: 150px;
+    text-transform: none !important; }
+  .keyboard .key.bksp {
+    font-size: 0; }
+    .keyboard .key.bksp::after {
+      content: '';
+      position: absolute;
+      left: 44px;
+      top: 8px;
+      background-image: url("../img/ui/backspace_white_48x48.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px; }
+  .keyboard .key span {
+    transition: opacity 0.1s linear; }
+    .keyboard .key span.faded {
+      opacity: 0; }
+
+/*# sourceMappingURL=keyboard.css.map */

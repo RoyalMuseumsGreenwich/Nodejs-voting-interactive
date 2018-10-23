@@ -51,7 +51,7 @@ app.post('/vote', (req, res) => {
 });
 
 
-const localLogFile = './vote_log.txt';
+const localLogFile = path.join(__dirname+'/vote_log.csv');
 
 function saveVoteLocally(voteData) {
   console.log("Saving vote locally...");
@@ -158,7 +158,7 @@ function sendEmailToMailchimp(voteData) {
 function loadMcConfig(voteData, callback) {
   console.log("Loading Mailchimp configuration...");
 
-  fs.readFile('credentials/mc_config_REM.json', (err, config) => {
+  fs.readFile('credentials/mc_config.json', (err, config) => {
     if (err) {
       return console.log('Error loading mailchimp configuration file:', err);
     } else {

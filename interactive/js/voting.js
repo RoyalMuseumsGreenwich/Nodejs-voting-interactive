@@ -1,5 +1,9 @@
 $(function() {
 
+	document.addEventListener('contextmenu', (e) => {
+		e.preventDefault();
+	});
+
 	//	DOM variables
 	var $stillThereScreen = $('#stillThereScreen'),
 			$attractScreen = $('#attractScreen'),
@@ -27,7 +31,7 @@ $(function() {
 	var changingScreens;
 
 	var voteConfirmedHandler;
-	var voteConfirmedDisplayTime = 5000;
+	var voteConfirmedDisplayTime = 30000;
 
 	var lockedControls;
 

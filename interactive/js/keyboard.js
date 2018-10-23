@@ -86,7 +86,7 @@ var keyboard = {
 				inputString = inputString.slice(0, pos) + key + inputString.slice(pos, inputString.length);
 				$('#emailInput').val(inputString);
 				input.focus();
-				input.setSelectionRange(pos+1, pos+1);
+				input.setSelectionRange(pos+key.length, pos+key.length);
 			}
 		});
 		$('.keyboard').fadeIn('fast');
